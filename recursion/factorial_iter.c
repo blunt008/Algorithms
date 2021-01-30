@@ -6,17 +6,16 @@
 #include <stdlib.h>
 
 int factorial(int n) {
-    int sum = 1;
+   int sum = 1; 
+   for (;n > 0; n--) {
+       sum *= n;
+   }
 
-    for (int i = 1; i <= n; ++i) {
-        sum *= i;
-    }
-
-    return sum;
+   return sum;
 }
 
 int main(void) {
-    int sum = factorial(1);
+    int sum = factorial(4);
     printf("The factorial is %d\n", sum);
 
     return EXIT_SUCCESS;
