@@ -17,6 +17,8 @@ int fib(int n, int A[]) {
        A[n - 1] = fib(n - 1, A); 
     } 
 
+    A[n] = A[n - 2] + A[n - 1];
+
     return A[n - 2] + A[n - 1];
 }
 
